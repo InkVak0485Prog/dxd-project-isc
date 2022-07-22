@@ -65,16 +65,26 @@
           }
         ]
       }
+    },
+    {
+      "name": "Test2",
+      "type": "tool",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_2"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "ru_ru": {
+      "item.bvv.test_2": "Test 2",
       "item.bvv.ieuyie": "Красный дракон",
       "block.bvv.power": "Питание(создан для тестов)"
     },
     "en_us": {
+      "item.bvv.test_2": "Test 2",
       "item.bvv.ieuyie": "None",
       "block.bvv.power": "Power(Creater test)"
     }
