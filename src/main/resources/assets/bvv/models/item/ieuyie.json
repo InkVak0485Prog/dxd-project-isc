@@ -1,0 +1,6 @@
+{
+  "parent": "bvv:custom/the_hand_of_the_red_dragon",
+  "textures": {
+    "particle": "bvv:items/not"
+  }
+}

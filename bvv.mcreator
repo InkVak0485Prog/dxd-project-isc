@@ -1,0 +1,116 @@
+{
+  "mod_elements": [
+    {
+      "name": "Hh",
+      "type": "enchantment",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hh"
+    },
+    {
+      "name": "Power",
+      "type": "block",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power",
+      "path": "~/Power"
+    },
+    {
+      "name": "PowerKrasnyiKamienVkl",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_krasnyi_kamien_vkl",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Power"
+    },
+    {
+      "name": "Ieuyie",
+      "type": "tool",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ieuyie"
+    },
+    {
+      "name": "Kill",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kill",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "enchantment.bvv.hh": "Hh",
+      "item.bvv.ieuyie": "1",
+      "block.bvv.power": "Power"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Power",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "bvv",
+    "modName": "dxd project",
+    "version": "0.0.0.0.0.2",
+    "author": "ISCat Admin, MCreator",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "mcreator_link"
+    ],
+    "currentGenerator": "forge-1.16.5",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.bvv",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202200120510
+}
