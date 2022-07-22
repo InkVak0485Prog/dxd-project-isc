@@ -1,14 +1,6 @@
 {
   "mod_elements": [
     {
-      "name": "Hh",
-      "type": "enchantment",
-      "sortid": 2,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "hh"
-    },
-    {
       "name": "Power",
       "type": "block",
       "sortid": 3,
@@ -78,10 +70,13 @@
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
+    "ru_ru": {
+      "item.bvv.ieuyie": "Красный дракон",
+      "block.bvv.power": "Питание(создан для тестов)"
+    },
     "en_us": {
-      "enchantment.bvv.hh": "Hh",
-      "item.bvv.ieuyie": "1",
-      "block.bvv.power": "Power"
+      "item.bvv.ieuyie": "None",
+      "block.bvv.power": "Power(Creater test)"
     }
   },
   "foldersRoot": {
