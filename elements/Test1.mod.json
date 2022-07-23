@@ -4,19 +4,19 @@
   "definition": {
     "renderType": 1,
     "texture": "not",
-    "customModelName": "itsukuv:default",
-    "name": "Aakyam",
+    "customModelName": "itsukuv4:default",
+    "name": "Test 1",
     "specialInfo": [],
     "creativeTab": {
-      "value": "COMBAT"
+      "value": "TOOLS"
     },
-    "toolType": "Special",
+    "toolType": "Sword",
     "harvestLevel": 1,
     "efficiency": 4.0,
-    "attackSpeed": 5.0,
+    "attackSpeed": 1.0,
     "enchantability": 2,
-    "damageVsEntity": 8.0,
-    "usageCount": 12460,
+    "damageVsEntity": 4.0,
+    "usageCount": 47235,
     "blocksAffected": [],
     "hasGlow": false,
     "repairItems": [

@@ -46,7 +46,16 @@
       "locked_code": false,
       "registry_name": "kill",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
       }
     },
     {
@@ -58,12 +67,12 @@
       "registry_name": "test_2"
     },
     {
-      "name": "Aakyam",
+      "name": "Test1",
       "type": "tool",
-      "sortid": 10,
+      "sortid": 9,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "aakyam"
+      "registry_name": "test_1"
     }
   ],
   "variable_elements": [],
@@ -72,7 +81,7 @@
     "ru_ru": {
       "block.dxd_project.power": "Power",
       "item.bvv.test_2": "Test 2",
-      "item.dxd_project.aakyam": "Aakyam",
+      "item.dxd_project.test_1": "Test 1",
       "item.bvv.ieuyie": "Красный дракон",
       "block.bvv.power": "Питание(создан для тестов)",
       "item.dxd_project.test_2": "Test 2"
@@ -80,7 +89,7 @@
     "en_us": {
       "block.dxd_project.power": "Power",
       "item.bvv.test_2": "Test 2",
-      "item.dxd_project.aakyam": "Aakyam",
+      "item.dxd_project.test_1": "Test 1",
       "item.bvv.ieuyie": "1",
       "block.bvv.power": "Power",
       "item.dxd_project.test_2": "Test 2"

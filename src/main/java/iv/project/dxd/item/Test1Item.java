@@ -2,18 +2,16 @@
 package iv.project.dxd.item;
 
 import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.item.SwordItem;
+import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.IItemTier;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.block.Blocks;
 
 import java.util.stream.Stream;
 import java.util.Map;
@@ -24,19 +22,19 @@ import iv.project.dxd.procedures.KillProcedure;
 import iv.project.dxd.DxdProjectModElements;
 
 @DxdProjectModElements.ModElement.Tag
-public class Test2Item extends DxdProjectModElements.ModElement {
-	@ObjectHolder("dxd_project:test_2")
+public class Test1Item extends DxdProjectModElements.ModElement {
+	@ObjectHolder("dxd_project:test_1")
 	public static final Item block = null;
 
-	public Test2Item(DxdProjectModElements instance) {
-		super(instance, 8);
+	public Test1Item(DxdProjectModElements instance) {
+		super(instance, 9);
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new SwordItem(new IItemTier() {
 			public int getMaxUses() {
-				return 10000;
+				return 47235;
 			}
 
 			public float getEfficiency() {
@@ -44,7 +42,7 @@ public class Test2Item extends DxdProjectModElements.ModElement {
 			}
 
 			public float getAttackDamage() {
-				return 6f;
+				return 2f;
 			}
 
 			public int getHarvestLevel() {
@@ -56,7 +54,7 @@ public class Test2Item extends DxdProjectModElements.ModElement {
 			}
 
 			public Ingredient getRepairMaterial() {
-				return Ingredient.fromStacks(new ItemStack(Blocks.IRON_BLOCK));
+				return Ingredient.fromStacks(new ItemStack(Items.NETHERITE_INGOT));
 			}
 		}, 3, -3f, new Item.Properties().group(ItemGroup.TOOLS)) {
 			@Override
@@ -72,12 +70,6 @@ public class Test2Item extends DxdProjectModElements.ModElement {
 								.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
 				return retval;
 			}
-
-			@Override
-			@OnlyIn(Dist.CLIENT)
-			public boolean hasEffect(ItemStack itemstack) {
-				return true;
-			}
-		}.setRegistryName("test_2"));
+		}.setRegistryName("test_1"));
 	}
 }
