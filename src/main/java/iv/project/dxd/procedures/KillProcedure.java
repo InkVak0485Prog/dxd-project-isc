@@ -1,4 +1,4 @@
-package net.mcreator.bvv.procedures;
+package iv.project.dxd.procedures;
 
 import net.minecraft.util.DamageSource;
 import net.minecraft.item.ItemStack;
@@ -6,22 +6,22 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.bvv.BvvMod;
-
 import java.util.Random;
 import java.util.Map;
+
+import iv.project.dxd.DxdProjectMod;
 
 public class KillProcedure {
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				BvvMod.LOGGER.warn("Failed to load dependency entity for procedure Kill!");
+				DxdProjectMod.LOGGER.warn("Failed to load dependency entity for procedure Kill!");
 			return;
 		}
 		if (dependencies.get("itemstack") == null) {
 			if (!dependencies.containsKey("itemstack"))
-				BvvMod.LOGGER.warn("Failed to load dependency itemstack for procedure Kill!");
+				DxdProjectMod.LOGGER.warn("Failed to load dependency itemstack for procedure Kill!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

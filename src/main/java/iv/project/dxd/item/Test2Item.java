@@ -1,5 +1,5 @@
 
-package net.mcreator.bvv.item;
+package iv.project.dxd.item;
 
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -15,20 +15,20 @@ import net.minecraft.item.IItemTier;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.block.Blocks;
 
-import net.mcreator.bvv.procedures.KillProcedure;
-import net.mcreator.bvv.BvvModElements;
-
 import java.util.stream.Stream;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.AbstractMap;
 
-@BvvModElements.ModElement.Tag
-public class Test2Item extends BvvModElements.ModElement {
-	@ObjectHolder("bvv:test_2")
+import iv.project.dxd.procedures.KillProcedure;
+import iv.project.dxd.DxdProjectModElements;
+
+@DxdProjectModElements.ModElement.Tag
+public class Test2Item extends DxdProjectModElements.ModElement {
+	@ObjectHolder("dxd_project:test_2")
 	public static final Item block = null;
 
-	public Test2Item(BvvModElements instance) {
+	public Test2Item(DxdProjectModElements instance) {
 		super(instance, 8);
 	}
 

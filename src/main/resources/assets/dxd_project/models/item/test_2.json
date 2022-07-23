@@ -2,8 +2,8 @@
   "forge_marker": 1,
   "parent": "forge:item/default",
   "loader": "forge:obj",
-  "model": "bvv:models/item/energyweapon.obj",
+  "model": "dxd_project:models/item/energyweapon.obj",
   "textures": {
-    "particle": "bvv:items/not"
+    "particle": "dxd_project:items/not"
   }
 }

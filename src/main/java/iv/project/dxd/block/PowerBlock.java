@@ -1,5 +1,5 @@
 
-package net.mcreator.bvv.block;
+package iv.project.dxd.block;
 
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.items.wrapper.SidedInvWrapper;
@@ -49,9 +49,6 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.bvv.procedures.PowerKrasnyiKamienVklProcedure;
-import net.mcreator.bvv.BvvModElements;
-
 import javax.annotation.Nullable;
 
 import java.util.stream.Stream;
@@ -62,14 +59,17 @@ import java.util.HashMap;
 import java.util.Collections;
 import java.util.AbstractMap;
 
-@BvvModElements.ModElement.Tag
-public class PowerBlock extends BvvModElements.ModElement {
-	@ObjectHolder("bvv:power")
+import iv.project.dxd.procedures.PowerKrasnyiKamienVklProcedure;
+import iv.project.dxd.DxdProjectModElements;
+
+@DxdProjectModElements.ModElement.Tag
+public class PowerBlock extends DxdProjectModElements.ModElement {
+	@ObjectHolder("dxd_project:power")
 	public static final Block block = null;
-	@ObjectHolder("bvv:power")
+	@ObjectHolder("dxd_project:power")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 
-	public PowerBlock(BvvModElements instance) {
+	public PowerBlock(DxdProjectModElements instance) {
 		super(instance, 3);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dxd_project:blocks/ee",
+    "up": "dxd_project:blocks/ee",
+    "north": "dxd_project:blocks/ee",
+    "east": "dxd_project:blocks/ee",
+    "south": "dxd_project:blocks/ee",
+    "west": "dxd_project:blocks/ee",
+    "particle": "dxd_project:blocks/ee"
+  }
+}

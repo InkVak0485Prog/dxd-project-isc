@@ -79,14 +79,20 @@
   "sound_elements": [],
   "language_map": {
     "ru_ru": {
+      "block.dxd_project.power": "Power",
       "item.bvv.test_2": "Test 2",
       "item.bvv.ieuyie": "Красный дракон",
-      "block.bvv.power": "Питание(создан для тестов)"
+      "item.dxd_project.ieuyie": "1",
+      "block.bvv.power": "Питание(создан для тестов)",
+      "item.dxd_project.test_2": "Test 2"
     },
     "en_us": {
+      "block.dxd_project.power": "Power",
       "item.bvv.test_2": "Test 2",
-      "item.bvv.ieuyie": "None",
-      "block.bvv.power": "Power(Creater test)"
+      "item.bvv.ieuyie": "1",
+      "item.dxd_project.ieuyie": "1",
+      "block.bvv.power": "Power",
+      "item.dxd_project.test_2": "Test 2"
     }
   },
   "foldersRoot": {
@@ -99,22 +105,22 @@
     ]
   },
   "workspaceSettings": {
-    "modid": "bvv",
-    "modName": "dxd project",
-    "version": "0.0.0.0.0.2",
-    "author": "ISCat Admin, MCreator",
-    "license": "Academic Free License v3.0",
+    "modid": "dxd_project",
+    "modName": "DXD Project",
+    "version": "0.0.0.0.0.2.3",
+    "description": "Демоны Старшей Школы",
+    "author": "InkVak0485, VaxerGame54, MCreator",
+    "websiteURL": "https://github.com/InkVak0485Prog/dxd-project-isc",
+    "license": "ISC License (ISCL) Microsoft Public License (Ms-PL)",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [
-      "mcreator_link"
-    ],
+    "mcreatorDependencies": [],
     "currentGenerator": "forge-1.16.5",
-    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
-    "modElementsPackage": "net.mcreator.bvv",
+    "credits": "(пока пусто)",
+    "modElementsPackage": "iv.project.dxd",
     "lockBaseModFiles": false
   },
   "mcreatorVersion": 202200120510

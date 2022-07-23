@@ -1,5 +1,5 @@
 
-package net.mcreator.bvv.item;
+package iv.project.dxd.item;
 
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -15,23 +15,23 @@ import net.minecraft.entity.ai.attributes.Attribute;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.bvv.procedures.KillProcedure;
-import net.mcreator.bvv.BvvModElements;
-
 import java.util.stream.Stream;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.AbstractMap;
 
+import iv.project.dxd.procedures.KillProcedure;
+import iv.project.dxd.DxdProjectModElements;
+
 import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap;
 
-@BvvModElements.ModElement.Tag
-public class IeuyieItem extends BvvModElements.ModElement {
-	@ObjectHolder("bvv:ieuyie")
+@DxdProjectModElements.ModElement.Tag
+public class IeuyieItem extends DxdProjectModElements.ModElement {
+	@ObjectHolder("dxd_project:ieuyie")
 	public static final Item block = null;
 
-	public IeuyieItem(BvvModElements instance) {
+	public IeuyieItem(DxdProjectModElements instance) {
 		super(instance, 5);
 	}
 

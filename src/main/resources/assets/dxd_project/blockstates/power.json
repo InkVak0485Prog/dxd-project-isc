@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "dxd_project:block/power"
+    }
+  }
+}

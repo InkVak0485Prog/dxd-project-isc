@@ -1,16 +1,19 @@
 modLoader="javafml"
 loaderVersion="[36,)"
-license="Academic Free License v3.0"
+license="ISC License (ISCL) Microsoft Public License (Ms-PL)"
 
 [[mods]]
-modId="bvv"
-version="0.0.0.0.0.2"
-displayName="dxd project"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
-displayURL="https://mcreator.net"
-authors="ISCat Admin, MCreator"
+modId="dxd_project"
+version="0.0.0.0.0.2.3"
+displayName="DXD Project"
+credits="(пока пусто)"
+displayURL="https://github.com/InkVak0485Prog/dxd-project-isc"
+authors="InkVak0485, VaxerGame54, MCreator"
+description='''
+Демоны Старшей Школы
+'''
 
-[[dependencies.bvv]]
+[[dependencies.dxd_project]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.16.5]"
@@ -18,11 +21,5 @@ authors="ISCat Admin, MCreator"
     side="BOTH"
 
 
-[[dependencies.bvv]]
-    modId="mcreator_link"
-    mandatory=true
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
 
 
