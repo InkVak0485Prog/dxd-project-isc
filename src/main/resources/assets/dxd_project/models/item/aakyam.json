@@ -1,0 +1,9 @@
+{
+  "parent": "dxd_project:custom/itsukuv",
+  "textures": {
+    "1": "dxd_project:blocks/1",
+    "2": "dxd_project:blocks/3",
+    "4": "dxd_project:blocks/1626292825_2-kartinkin-com-p-zhyoltii-fon-odnotonnii-yarkii-krasivo-6",
+    "particle": "dxd_project:items/not"
+  }
+}

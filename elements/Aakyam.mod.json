@@ -4,19 +4,19 @@
   "definition": {
     "renderType": 1,
     "texture": "not",
-    "customModelName": "the_hand_of_the_red_dragon:default",
-    "name": "1",
+    "customModelName": "itsukuv:default",
+    "name": "Aakyam",
     "specialInfo": [],
     "creativeTab": {
       "value": "COMBAT"
     },
-    "toolType": "MultiTool",
+    "toolType": "Sword",
     "harvestLevel": 1,
     "efficiency": 4.0,
     "attackSpeed": 5.0,
-    "enchantability": 25,
+    "enchantability": 2,
     "damageVsEntity": 8.0,
-    "usageCount": 13700,
+    "usageCount": 12460,
     "blocksAffected": [],
     "hasGlow": false,
     "repairItems": [
@@ -24,7 +24,7 @@
         "value": "Items.NETHERITE_INGOT"
       }
     ],
-    "immuneToFire": true,
+    "immuneToFire": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "onEntityHitWith": {

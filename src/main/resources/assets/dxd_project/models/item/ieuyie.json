@@ -1,6 +1,0 @@
-{
-  "parent": "dxd_project:custom/the_hand_of_the_red_dragon",
-  "textures": {
-    "particle": "dxd_project:items/not"
-  }
-}
