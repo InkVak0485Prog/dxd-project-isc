@@ -15,10 +15,7 @@ import net.minecraft.item.IItemTier;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.block.Blocks;
 
-import java.util.stream.Stream;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.AbstractMap;
+import java.util.Collections;
 
 import iv.project.dxd.procedures.KillProcedure;
 import iv.project.dxd.DxdProjectModElements;
@@ -67,9 +64,7 @@ public class Test2Item extends DxdProjectModElements.ModElement {
 				double z = entity.getPosZ();
 				World world = entity.world;
 
-				KillProcedure.executeProcedure(
-						Stream.of(new AbstractMap.SimpleEntry<>("entity", entity), new AbstractMap.SimpleEntry<>("itemstack", itemstack))
-								.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+				KillProcedure.executeProcedure(Collections.emptyMap());
 				return retval;
 			}
 

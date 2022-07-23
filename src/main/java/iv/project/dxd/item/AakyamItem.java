@@ -4,22 +4,24 @@ package iv.project.dxd.item;
 import net.minecraftforge.registries.ObjectHolder;
 
 import net.minecraft.world.World;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.item.SwordItem;
-import net.minecraft.item.Items;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
-import net.minecraft.item.IItemTier;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.entity.ai.attributes.AttributeModifier;
+import net.minecraft.entity.ai.attributes.Attribute;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.block.BlockState;
 
-import java.util.stream.Stream;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.AbstractMap;
+import java.util.Collections;
 
 import iv.project.dxd.procedures.KillProcedure;
 import iv.project.dxd.DxdProjectModElements;
+
+import com.google.common.collect.Multimap;
+import com.google.common.collect.ImmutableMultimap;
 
 @DxdProjectModElements.ModElement.Tag
 public class AakyamItem extends DxdProjectModElements.ModElement {
@@ -32,31 +34,7 @@ public class AakyamItem extends DxdProjectModElements.ModElement {
 
 	@Override
 	public void initElements() {
-		elements.items.add(() -> new SwordItem(new IItemTier() {
-			public int getMaxUses() {
-				return 12460;
-			}
-
-			public float getEfficiency() {
-				return 4f;
-			}
-
-			public float getAttackDamage() {
-				return 6f;
-			}
-
-			public int getHarvestLevel() {
-				return 1;
-			}
-
-			public int getEnchantability() {
-				return 2;
-			}
-
-			public Ingredient getRepairMaterial() {
-				return Ingredient.fromStacks(new ItemStack(Items.NETHERITE_INGOT));
-			}
-		}, 3, 1f, new Item.Properties().group(ItemGroup.COMBAT)) {
+		elements.items.add(() -> new ItemToolCustom() {
 			@Override
 			public boolean hitEntity(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 				boolean retval = super.hitEntity(itemstack, entity, sourceentity);
@@ -65,11 +43,51 @@ public class AakyamItem extends DxdProjectModElements.ModElement {
 				double z = entity.getPosZ();
 				World world = entity.world;
 
-				KillProcedure.executeProcedure(
-						Stream.of(new AbstractMap.SimpleEntry<>("entity", entity), new AbstractMap.SimpleEntry<>("itemstack", itemstack))
-								.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+				KillProcedure.executeProcedure(Collections.emptyMap());
 				return retval;
 			}
 		}.setRegistryName("aakyam"));
+	}
+
+	private static class ItemToolCustom extends Item {
+		protected ItemToolCustom() {
+			super(new Item.Properties().group(ItemGroup.COMBAT).maxDamage(12460));
+		}
+
+		@Override
+		public float getDestroySpeed(ItemStack itemstack, BlockState blockstate) {
+			return 1;
+		}
+
+		@Override
+		public boolean onBlockDestroyed(ItemStack stack, World worldIn, BlockState state, BlockPos pos, LivingEntity entityLiving) {
+			stack.damageItem(1, entityLiving, i -> i.sendBreakAnimation(EquipmentSlotType.MAINHAND));
+			return true;
+		}
+
+		@Override
+		public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+			stack.damageItem(2, attacker, i -> i.sendBreakAnimation(EquipmentSlotType.MAINHAND));
+			return true;
+		}
+
+		@Override
+		public int getItemEnchantability() {
+			return 2;
+		}
+
+		@Override
+		public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlotType equipmentSlot) {
+			if (equipmentSlot == EquipmentSlotType.MAINHAND) {
+				ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
+				builder.putAll(super.getAttributeModifiers(equipmentSlot));
+				builder.put(Attributes.ATTACK_DAMAGE,
+						new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Tool modifier", 6f, AttributeModifier.Operation.ADDITION));
+				builder.put(Attributes.ATTACK_SPEED,
+						new AttributeModifier(ATTACK_SPEED_MODIFIER, "Tool modifier", 1, AttributeModifier.Operation.ADDITION));
+				return builder.build();
+			}
+			return super.getAttributeModifiers(equipmentSlot);
+		}
 	}
 }

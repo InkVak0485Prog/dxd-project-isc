@@ -46,16 +46,7 @@
       "locked_code": false,
       "registry_name": "kill",
       "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
+        "dependencies": []
       }
     },
     {
